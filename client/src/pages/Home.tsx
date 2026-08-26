@@ -52,7 +52,7 @@ export default function Home() {
           <img src="/manus-storage/roadi-mark_5db22b61.png" alt="" className="brand-mark" />
           <span><strong>Roadi</strong><small>路迪｜車管家</small></span>
         </a>
-        <div className="topbar-meta"><span className="status-dot" /> Privacy policy <span className="meta-divider" /> 2026.08</div>
+        <div className="topbar-meta"><span className="status-dot" /> Privacy policy <span className="meta-divider" /> 2026.08 <a className="language-switch" href="/en">EN</a></div>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="開啟章節選單" aria-expanded={menuOpen}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button>
       </header>
 
