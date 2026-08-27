@@ -39,6 +39,8 @@ jobs:
           GITHUB_ACTIONS: true
         run: |
           pnpm build
+          mkdir -p dist/public/en
+          cp dist/public/index.html dist/public/en/index.html
           cp dist/public/index.html dist/public/404.html
 
       - name: Configure Pages
