@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight, CarFront, Check, ChevronRight, Mail, Menu, ShieldCheck, X } from "lucide-react";
 
 const SITE_BASE = import.meta.env.BASE_URL;
+const ASSET_BASE = "https://roadiprivacy-aekum4hy.manus.space/manus-storage/";
 
 const sections = [
   { id: "data", number: "01", label: "處理哪些資料" },
@@ -51,7 +52,7 @@ export default function Home() {
     <div className="site-shell">
       <header className="topbar">
         <a className="brand" href="#top" aria-label="Roadi 路迪首頁">
-          <img src="/manus-storage/roadi-mark_5db22b61.png" alt="" className="brand-mark" />
+          <img src={`${ASSET_BASE}roadi-mark_5db22b61.png`} alt="" className="brand-mark" />
           <span><strong>Roadi</strong><small>路迪｜車管家</small></span>
         </a>
         <div className="topbar-meta"><span className="status-dot" /> Privacy policy <span className="meta-divider" /> 2026.08 <a className="language-switch" href={`${SITE_BASE}en`}>EN</a></div>
@@ -66,7 +67,7 @@ export default function Home() {
             <p className="hero-lede">Roadi 採用本機優先設計，讓車輛紀錄留在您的裝置，並清楚說明每一項資料如何被處理。</p>
             <div className="hero-details"><span>最後更新</span><strong>2026 年 8 月 26 日</strong><span className="detail-rule" /><span>適用平台</span><strong>Android App</strong></div>
           </div>
-          <div className="hero-visual" aria-hidden="true"><img src="/manus-storage/roadi-policy-hero_8d71e61f.jpg" alt="" /><div className="hero-stamp">LOCAL<br /><span>FIRST</span></div><div className="road-mark" /></div>
+          <div className="hero-visual" aria-hidden="true"><img src={`${ASSET_BASE}roadi-policy-hero_8d71e61f.jpg`} alt="" /><div className="hero-stamp">LOCAL<br /><span>FIRST</span></div><div className="road-mark" /></div>
         </section>
 
         <section className="intro-band"><div className="intro-icon"><ShieldCheck size={25} /></div><p><strong>我們重視您的隱私。</strong> 本政策說明 Roadi 如何處理您在使用本 App 時產生、輸入或使用的資料。主要車輛資料儲存在您的裝置本機，不要求建立使用者帳號，也不會主動上傳至由開發者營運的伺服器。</p><ArrowUpRight size={21} className="intro-arrow" /></section>

@@ -1,7 +1,7 @@
-# Roadi GitHub Pages 404 修正
+# Roadi GitHub Pages 白畫面修正
 
-- [x] 判斷目前 main/root 發布找不到根目錄 index.html
-- [x] 加入 GitHub Actions Pages 建置部署 workflow
-- [x] 設定 Vite 專案路徑以支援 `/roadi-privacy-policy/`
-- [x] 驗證正式建置與英文版 `/en` 路由
-- [x] 保存修正版並提供 GitHub 設定步驟
+- [x] 確認 GitHub Pages 已能載入 HTML 標題
+- [x] 檢查 HTML 中 script 與 CSS 的公開資源 URL
+- [x] 檢查資源 HTTP 回應與瀏覽器錯誤
+- [x] 修正 gh-pages 靜態資源路徑
+- [x] 重新發布並驗證中文版與英文版
