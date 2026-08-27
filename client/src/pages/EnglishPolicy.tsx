@@ -1,6 +1,8 @@
 // Design philosophy: 車庫晨光。英文版延續 Roadi 的溫暖紙白、深墨綠、Safety Orange 與路線清單，確保雙語政策具一致品牌體驗。
 import { ArrowUpRight, CarFront, Check, ChevronRight, Mail, ShieldCheck } from "lucide-react";
 
+const SITE_BASE = import.meta.env.BASE_URL;
+
 const sections = [
   ["data", "01", "What Information Does Roadi Handle?"], ["account", "02", "No User Account Required"], ["not-collect", "03", "Information Roadi Does Not Actively Collect"], ["local", "04", "Local Data Storage"], ["export", "05", "Data Export, Import, and Sharing"], ["notification", "06", "Notifications"], ["third-party", "07", "Third-Party Software and Services"], ["sharing", "08", "Data Sharing and Sale"], ["retention", "09", "Data Retention and Deletion"], ["security", "10", "Data Security"], ["children", "11", "Children's Privacy"], ["changes", "12", "Changes to This Privacy Policy"], ["contact", "13", "Contact Us"], ["scope", "14", "Scope"],
 ];
@@ -9,7 +11,7 @@ const BulletList = ({ items }: { items: string[] }) => <ul className="policy-lis
 export default function EnglishPolicy() {
   const jumpTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   return <div className="site-shell">
-    <header className="topbar"><a className="brand" href="/" aria-label="Roadi home"><img src="/manus-storage/roadi-mark_5db22b61.png" alt="" className="brand-mark" /><span><strong>Roadi</strong><small>Vehicle Companion</small></span></a><div className="topbar-meta"><span className="status-dot" /> Privacy policy <span className="meta-divider" /> 2026.08 <a className="language-switch" href="/">中文</a></div><a className="language-switch mobile-language" href="/">中文</a></header>
+    <header className="topbar"><a className="brand" href={SITE_BASE} aria-label="Roadi home"><img src="/manus-storage/roadi-mark_5db22b61.png" alt="" className="brand-mark" /><span><strong>Roadi</strong><small>Vehicle Companion</small></span></a><div className="topbar-meta"><span className="status-dot" /> Privacy policy <span className="meta-divider" /> 2026.08 <a className="language-switch" href={SITE_BASE}>中文</a></div><a className="language-switch mobile-language" href={SITE_BASE}>中文</a></header>
     <main id="top">
       <section className="hero-section"><div className="hero-copy"><div className="eyebrow"><span className="eyebrow-line" /> DOCUMENT / PRIVACY</div><h1>Keep your data<br /><em>in your own garage.</em></h1><p className="hero-lede">Roadi follows a “Local-First” design approach. Your vehicle data is primarily stored on your device, with a clear explanation of how every piece of information is handled.</p><div className="hero-details"><span>Last updated</span><strong>August 26, 2026</strong><span className="detail-rule" /><span>Platform</span><strong>Android App</strong></div></div><div className="hero-visual" aria-hidden="true"><img src="/manus-storage/roadi-policy-hero_8d71e61f.jpg" alt="" /><div className="hero-stamp">LOCAL<br /><span>FIRST</span></div><div className="road-mark" /></div></section>
       <section className="intro-band"><div className="intro-icon"><ShieldCheck size={25} /></div><p><strong>We respect your privacy.</strong> This Privacy Policy explains how Roadi handles information that is generated, entered, or used when you use the App. Roadi does not require you to create a user account and does not actively upload your vehicle records to servers operated by the Developer.</p><ArrowUpRight size={21} className="intro-arrow" /></section>

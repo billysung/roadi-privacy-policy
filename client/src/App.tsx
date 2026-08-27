@@ -9,10 +9,11 @@ import EnglishPolicy from "./pages/EnglishPolicy";
 
 
 function Router() {
+  const siteBase = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/en"} component={EnglishPolicy} />
+      <Route path={`${siteBase}/`} component={Home} />
+      <Route path={`${siteBase}/en`} component={EnglishPolicy} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

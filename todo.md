@@ -1,8 +1,7 @@
-# Roadi 英文政策原文替換
+# Roadi GitHub Pages 404 修正
 
-- [x] 讀取並整理使用者提供的英文政策原文
-- [x] 以使用者原文替換英文頁面全部 14 個章節
-- [x] 保留中英文切換與 Roadi 品牌頁首
-- [x] 驗證英文版手機與桌面排版
-- [x] 執行型別檢查與正式建置
-- [x] 保存並交付修正版
+- [x] 判斷目前 main/root 發布找不到根目錄 index.html
+- [x] 加入 GitHub Actions Pages 建置部署 workflow
+- [x] 設定 Vite 專案路徑以支援 `/roadi-privacy-policy/`
+- [x] 驗證正式建置與英文版 `/en` 路由
+- [x] 保存修正版並提供 GitHub 設定步驟

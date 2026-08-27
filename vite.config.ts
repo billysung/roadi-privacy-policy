@@ -206,6 +206,8 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
+  // GitHub Pages project-site base path; works with the repository URL /roadi-privacy-policy/
+  base: process.env.GITHUB_ACTIONS ? "/roadi-privacy-policy/" : "/",
   plugins,
   resolve: {
     alias: {
