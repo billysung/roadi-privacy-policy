@@ -4,26 +4,25 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
-import EnglishPolicy from "@/pages/EnglishPolicy";
 import LitePolicy from "@/pages/LitePolicy";
-import RoadiLocalizedPolicy from "@/pages/RoadiLocalizedPolicy";
+import RoadiPremiumPolicy from "@/pages/RoadiPremiumPolicy";
 
 
 function Router() {
   const siteBase = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
   return (
     <Switch>
-      <Route path={`${siteBase}/`} component={Home} />
-      <Route path={`${siteBase}/en`} component={EnglishPolicy} />
-      <Route path={`${siteBase}/vi`} component={() => <RoadiLocalizedPolicy language="vi" />} />
-      <Route path={`${siteBase}/vi/`} component={() => <RoadiLocalizedPolicy language="vi" />} />
-      <Route path={`${siteBase}/th`} component={() => <RoadiLocalizedPolicy language="th" />} />
-      <Route path={`${siteBase}/th/`} component={() => <RoadiLocalizedPolicy language="th" />} />
-      <Route path={`${siteBase}/ms`} component={() => <RoadiLocalizedPolicy language="ms" />} />
-      <Route path={`${siteBase}/ms/`} component={() => <RoadiLocalizedPolicy language="ms" />} />
-      <Route path={`${siteBase}/id`} component={() => <RoadiLocalizedPolicy language="id" />} />
-      <Route path={`${siteBase}/id/`} component={() => <RoadiLocalizedPolicy language="id" />} />
+      <Route path={`${siteBase}/`} component={() => <RoadiPremiumPolicy language="zh" />} />
+      <Route path={`${siteBase}/en`} component={() => <RoadiPremiumPolicy language="en" />} />
+      <Route path={`${siteBase}/en/`} component={() => <RoadiPremiumPolicy language="en" />} />
+      <Route path={`${siteBase}/vi`} component={() => <RoadiPremiumPolicy language="vi" />} />
+      <Route path={`${siteBase}/vi/`} component={() => <RoadiPremiumPolicy language="vi" />} />
+      <Route path={`${siteBase}/th`} component={() => <RoadiPremiumPolicy language="th" />} />
+      <Route path={`${siteBase}/th/`} component={() => <RoadiPremiumPolicy language="th" />} />
+      <Route path={`${siteBase}/ms`} component={() => <RoadiPremiumPolicy language="ms" />} />
+      <Route path={`${siteBase}/ms/`} component={() => <RoadiPremiumPolicy language="ms" />} />
+      <Route path={`${siteBase}/id`} component={() => <RoadiPremiumPolicy language="id" />} />
+      <Route path={`${siteBase}/id/`} component={() => <RoadiPremiumPolicy language="id" />} />
       <Route path={`${siteBase}/lite/`} component={() => <LitePolicy language="zh" />} />
       <Route path={`${siteBase}/lite/en`} component={() => <LitePolicy language="en" />} />
       <Route path={`${siteBase}/lite/en/`} component={() => <LitePolicy language="en" />} />
