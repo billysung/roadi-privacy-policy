@@ -54,10 +54,10 @@ jobs:
           cp dist/public/index.html dist/public/404.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Premium｜路迪車管家</title>#' dist/public/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Premium｜Vehicle Care Privacy Policy</title>#' dist/public/en/index.html
-          sed -i 's#<title>[^<]*</title>#<title>Roadi｜Vehicle Companion Privacy Policy</title>#' dist/public/vi/index.html
-          sed -i 's#<title>[^<]*</title>#<title>Roadi｜นโยบายความเป็นส่วนตัว</title>#' dist/public/th/index.html
-          sed -i 's#<title>[^<]*</title>#<title>Roadi｜Dasar Privasi</title>#' dist/public/ms/index.html
-          sed -i 's#<title>[^<]*</title>#<title>Roadi｜Kebijakan Privasi</title>#' dist/public/id/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Premium｜Trợ lý chăm sóc xe｜Chính sách quyền riêng tư</title>#' dist/public/vi/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Premium｜ผู้ช่วยดูแลรถ｜นโยบายความเป็นส่วนตัว</title>#' dist/public/th/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Premium｜Pembantu Penjagaan Kenderaan｜Dasar Privasi</title>#' dist/public/ms/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Premium｜Asisten Perawatan Kendaraan｜Kebijakan Privasi</title>#' dist/public/id/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜隱私權政策</title>#' dist/public/lite/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Vehicle Care Privacy Policy</title>#' dist/public/lite/en/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Chính sách quyền riêng tư</title>#' dist/public/lite/vi/index.html
