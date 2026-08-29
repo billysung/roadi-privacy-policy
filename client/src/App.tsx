@@ -17,6 +17,10 @@ function Router() {
       <Route path={`${siteBase}/en`} component={EnglishPolicy} />
       <Route path={`${siteBase}/lite/`} component={() => <LitePolicy language="zh" />} />
       <Route path={`${siteBase}/lite/en/`} component={() => <LitePolicy language="en" />} />
+      <Route path={`${siteBase}/lite/vi/`} component={() => <LitePolicy language="vi" />} />
+      <Route path={`${siteBase}/lite/th/`} component={() => <LitePolicy language="th" />} />
+      <Route path={`${siteBase}/lite/ms/`} component={() => <LitePolicy language="ms" />} />
+      <Route path={`${siteBase}/lite/id/`} component={() => <LitePolicy language="id" />} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
