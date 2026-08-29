@@ -5,7 +5,8 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import EnglishPolicy from "./pages/EnglishPolicy";
+import EnglishPolicy from "@/pages/EnglishPolicy";
+import LitePolicy from "@/pages/LitePolicy";
 
 
 function Router() {
@@ -14,6 +15,8 @@ function Router() {
     <Switch>
       <Route path={`${siteBase}/`} component={Home} />
       <Route path={`${siteBase}/en`} component={EnglishPolicy} />
+      <Route path={`${siteBase}/lite/`} component={() => <LitePolicy language="zh" />} />
+      <Route path={`${siteBase}/lite/en/`} component={() => <LitePolicy language="en" />} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
