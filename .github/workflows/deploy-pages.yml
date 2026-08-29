@@ -48,6 +48,12 @@ jobs:
           cp dist/public/index.html dist/public/lite/ms/index.html
           cp dist/public/index.html dist/public/lite/id/index.html
           cp dist/public/index.html dist/public/404.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜隱私權政策</title>#' dist/public/lite/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Vehicle Care Privacy Policy</title>#' dist/public/lite/en/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Chính sách quyền riêng tư</title>#' dist/public/lite/vi/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜นโยบายความเป็นส่วนตัว</title>#' dist/public/lite/th/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Dasar Privasi</title>#' dist/public/lite/ms/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Kebijakan Privasi</title>#' dist/public/lite/id/index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

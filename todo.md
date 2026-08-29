@@ -1,10 +1,8 @@
-# Roadi Lite 雙語隱私權政策
+# Roadi Lite 六語系頁面標題更新
 
-- [x] 讀取使用者提供的英文版政策
-- [x] 整理中文版 16 個章節
-- [x] 確認聯絡信箱為 attila700@yahoo.com.tw
-- [x] 建立 Roadi Lite 中文政策頁面
-- [x] 建立 Roadi Lite 英文政策頁面
-- [x] 加入 `/lite/` 與 `/lite/en/` 路徑及雙語切換
-- [x] 驗證手機版與桌面版排版
+- [x] 整理中文、英文、越南文、泰文、馬來文與印尼文指定標題
+- [x] 更新六語系頁面的 document.title
+- [x] 執行型別檢查與正式建置
+- [x] 同步 GitHub main 與 gh-pages
+- [x] 驗證六個網址的頁面標題
 - [x] 保存並交付版本
