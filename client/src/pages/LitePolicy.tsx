@@ -1,4 +1,5 @@
 // Design philosophy: 車庫晨光。沿用 Roadi 的編輯式文件排版、道路標線與溫暖紙白，為 Lite 版本提供清楚、可靠、適合手機閱讀的雙語政策頁面。
+import { useEffect } from "react";
 import { ArrowUpRight, CarFront, Check, ChevronRight, Mail, ShieldCheck } from "lucide-react";
 
 type Language = "zh" | "en" | "vi" | "th" | "ms" | "id";
@@ -206,6 +207,17 @@ function BulletList({ items }: { items: string[] }) {
 export default function LitePolicy({ language }: { language: Language }) {
   const copy = localizedContent[language];
   const sections = copy.sections;
+  useEffect(() => {
+    const titles: Record<Language, string> = {
+      zh: "Roadi Lite｜隱私權政策",
+      en: "Roadi Lite｜Vehicle Care Privacy Policy",
+      vi: "Roadi Lite｜Chính sách quyền riêng tư",
+      th: "Roadi Lite｜นโยบายความเป็นส่วนตัว",
+      ms: "Roadi Lite｜Dasar Privasi",
+      id: "Roadi Lite｜Kebijakan Privasi",
+    };
+    document.title = titles[language];
+  }, [language]);
   const siteBase = import.meta.env.BASE_URL;
   const liteBase = `${siteBase}lite/`;
   const switchHref = language === "zh" ? `${liteBase}en/` : liteBase;
