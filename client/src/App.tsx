@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import EnglishPolicy from "@/pages/EnglishPolicy";
 import LitePolicy from "@/pages/LitePolicy";
+import RoadiLocalizedPolicy from "@/pages/RoadiLocalizedPolicy";
 
 
 function Router() {
@@ -15,6 +16,14 @@ function Router() {
     <Switch>
       <Route path={`${siteBase}/`} component={Home} />
       <Route path={`${siteBase}/en`} component={EnglishPolicy} />
+      <Route path={`${siteBase}/vi`} component={() => <RoadiLocalizedPolicy language="vi" />} />
+      <Route path={`${siteBase}/vi/`} component={() => <RoadiLocalizedPolicy language="vi" />} />
+      <Route path={`${siteBase}/th`} component={() => <RoadiLocalizedPolicy language="th" />} />
+      <Route path={`${siteBase}/th/`} component={() => <RoadiLocalizedPolicy language="th" />} />
+      <Route path={`${siteBase}/ms`} component={() => <RoadiLocalizedPolicy language="ms" />} />
+      <Route path={`${siteBase}/ms/`} component={() => <RoadiLocalizedPolicy language="ms" />} />
+      <Route path={`${siteBase}/id`} component={() => <RoadiLocalizedPolicy language="id" />} />
+      <Route path={`${siteBase}/id/`} component={() => <RoadiLocalizedPolicy language="id" />} />
       <Route path={`${siteBase}/lite/`} component={() => <LitePolicy language="zh" />} />
       <Route path={`${siteBase}/lite/en`} component={() => <LitePolicy language="en" />} />
       <Route path={`${siteBase}/lite/en/`} component={() => <LitePolicy language="en" />} />

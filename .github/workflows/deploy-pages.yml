@@ -39,8 +39,12 @@ jobs:
           GITHUB_ACTIONS: true
         run: |
           pnpm build
-          mkdir -p dist/public/en dist/public/lite/en dist/public/lite/vi dist/public/lite/th dist/public/lite/ms dist/public/lite/id
+          mkdir -p dist/public/en dist/public/vi dist/public/th dist/public/ms dist/public/id dist/public/lite/en dist/public/lite/vi dist/public/lite/th dist/public/lite/ms dist/public/lite/id
           cp dist/public/index.html dist/public/en/index.html
+          cp dist/public/index.html dist/public/vi/index.html
+          cp dist/public/index.html dist/public/th/index.html
+          cp dist/public/index.html dist/public/ms/index.html
+          cp dist/public/index.html dist/public/id/index.html
           cp dist/public/index.html dist/public/lite/index.html
           cp dist/public/index.html dist/public/lite/en/index.html
           cp dist/public/index.html dist/public/lite/vi/index.html
@@ -48,6 +52,10 @@ jobs:
           cp dist/public/index.html dist/public/lite/ms/index.html
           cp dist/public/index.html dist/public/lite/id/index.html
           cp dist/public/index.html dist/public/404.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi｜Vehicle Companion Privacy Policy</title>#' dist/public/vi/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi｜นโยบายความเป็นส่วนตัว</title>#' dist/public/th/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi｜Dasar Privasi</title>#' dist/public/ms/index.html
+          sed -i 's#<title>[^<]*</title>#<title>Roadi｜Kebijakan Privasi</title>#' dist/public/id/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜隱私權政策</title>#' dist/public/lite/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Vehicle Care Privacy Policy</title>#' dist/public/lite/en/index.html
           sed -i 's#<title>[^<]*</title>#<title>Roadi Lite｜Chính sách quyền riêng tư</title>#' dist/public/lite/vi/index.html
