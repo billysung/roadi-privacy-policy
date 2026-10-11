@@ -2,6 +2,8 @@
 import { useEffect } from "react";
 import { ArrowUpRight, CarFront, Check, ChevronRight, Mail, ShieldCheck } from "lucide-react";
 
+const SITE_BASE = import.meta.env.BASE_URL;
+
 type Language = "zh" | "en" | "vi" | "th" | "ms" | "id";
 
 type Section = {
@@ -226,7 +228,7 @@ export default function LitePolicy({ language }: { language: Language }) {
   return <div className="site-shell">
     <header className="topbar">
       <a className="brand" href={liteBase} aria-label="Roadi Lite privacy policy home">
-        <img src="https://roadiprivacy-aekum4hy.manus.space/manus-storage/roadi-mark_5db22b61.png" alt="" className="brand-mark" />
+        <img src={`${SITE_BASE}roadi-mark.webp`} alt="" className="brand-mark" />
         <span><strong>{copy.brand}</strong><small>{copy.subbrand}</small></span>
       </a>
       <div className="topbar-meta"><span className="status-dot" /> Privacy policy <span className="meta-divider" /> 2026.08 <a className="language-switch" href={switchHref}>{copy.languageLabel}</a></div>
@@ -234,7 +236,7 @@ export default function LitePolicy({ language }: { language: Language }) {
     <main id="top">
       <section className="hero-section">
         <div className="hero-copy"><div className="eyebrow"><span className="eyebrow-line" /> {copy.eyebrow}</div><h1>{copy.headline}</h1><p className="hero-lede">{copy.lede}</p><div className="hero-details"><span>{copy.updatedLabel}</span><strong>{copy.updated}</strong><span className="detail-rule" /><span>{copy.platformLabel}</span><strong>{copy.platform}</strong></div></div>
-        <div className="hero-visual" aria-hidden="true"><img src="https://roadiprivacy-aekum4hy.manus.space/manus-storage/roadi-policy-hero_8d71e61f.jpg" alt="" /><div className="hero-stamp">LOCAL<br /><span>LITE</span></div><div className="road-mark" /></div>
+        <div className="hero-visual" aria-hidden="true"><img src={`${SITE_BASE}roadi-policy-hero.webp`} alt="" /><div className="hero-stamp">LOCAL<br /><span>LITE</span></div><div className="road-mark" /></div>
       </section>
       <section className="intro-band"><div className="intro-icon"><ShieldCheck size={25} /></div><p>{copy.intro}</p><ArrowUpRight size={21} className="intro-arrow" /></section>
       <div className="policy-layout">

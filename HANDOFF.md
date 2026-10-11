@@ -199,6 +199,8 @@ curl -I https://billysung.github.io/roadi-privacy-policy/en/
 - GitHub Actions 已成功完成部署
 - 六個 Roadi 公開路徑均已驗證 HTTP 200
 
+2026-10-12：主視覺圖片與 Logo 已由 Manus 外部儲存來源改為 GitHub Pages 隨站部署的本地 WebP 資產，檔案位於 `client/public/roadi-policy-hero.webp` 與 `client/public/roadi-mark.webp`，以避免外部資產失效造成破圖。
+
 ## 9. 接手時建議先做的事
 
 1. 先讀取本文件及 `README.md`（若存在）。
