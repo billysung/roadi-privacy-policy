@@ -32,6 +32,7 @@ https://billysung.github.io/roadi-privacy-policy/
 | ภาษาไทย | `/th/` |
 | Bahasa Melayu | `/ms/` |
 | Bahasa Indonesia | `/id/` |
+| Español | `/es/` |
 
 舊有 Roadi Lite 路徑仍存在於程式與 GitHub Pages 部署流程中：
 
@@ -205,6 +206,7 @@ curl -I https://billysung.github.io/roadi-privacy-policy/en/
 3. 修改政策內容前，先確認是要修改六個語系，還是只修改單一語系。
 4. 修改 App 資料處理方式、廣告 SDK、登入、雲端同步、付款方案或權限後，必須同步檢查隱私權政策與 Google Play Data safety 表單。
 5. 若未來 Roadi Lite 完全不再使用，先搜尋所有 `/lite/` 連結與使用位置，再決定是否移除舊頁面。
+6. 新增語言時，需同步修改政策資料、`RoadiPremiumPolicy.tsx` 的語言切換與介面文字、`App.tsx` 路由，以及 `.github/workflows/deploy-pages.yml` 的實體入口與 `<title>`。
 
 ## 10. 不包含的事項
 

@@ -23,6 +23,8 @@ function Router() {
       <Route path={`${siteBase}/ms/`} component={() => <RoadiPremiumPolicy language="ms" />} />
       <Route path={`${siteBase}/id`} component={() => <RoadiPremiumPolicy language="id" />} />
       <Route path={`${siteBase}/id/`} component={() => <RoadiPremiumPolicy language="id" />} />
+      <Route path={`${siteBase}/es`} component={() => <RoadiPremiumPolicy language="es" />} />
+      <Route path={`${siteBase}/es/`} component={() => <RoadiPremiumPolicy language="es" />} />
       <Route path={`${siteBase}/lite/`} component={() => <LitePolicy language="zh" />} />
       <Route path={`${siteBase}/lite/en`} component={() => <LitePolicy language="en" />} />
       <Route path={`${siteBase}/lite/en/`} component={() => <LitePolicy language="en" />} />
